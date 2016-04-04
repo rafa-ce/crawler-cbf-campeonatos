@@ -12,4 +12,7 @@
   },
   "author": "Rafa C.",
   "license": "MIT",
+  "dependencies": {
+    "cheerio": "^0.20.0"
+  }
 }
