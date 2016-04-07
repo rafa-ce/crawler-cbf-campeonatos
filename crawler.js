@@ -1,27 +1,24 @@
-var http = require('http');
-var cheerio = require('cheerio');
+'use strict';
 
-if (process.argv.length <= 2)
-    process.exit(-1);
+let http = require('http');
 
-var url = process.argv[2]
+module.exports = class Crawler {
+  constructor(url) {
+    this.url = url;
+  }
 
-http.get(url, (response) => {
-  if (response.statusCode === 200) {
-    var body = '';
+  getBody(callback) {
+    http.get(this.url, function(response)
+    {
+        var data = '';
 
-    response.on('data', (chunk) => {
-      body += chunk;
-    });
+        response.on('data', function(chunk) {
+            data += chunk;
+        });
 
-    response.on('end', () => {
-      var $ = cheerio.load(body);
-      console.log("Título:  " + $('title').text());
+        response.on('end', function(){
+            callback(data);
+        });
     });
   }
-  else {
-    console.log('Erro - Status code: ' + response.statusCode);
-  }
-}).on('error', (e) => {
-  console.log('Erro: ${e.message}');
-});
+}
