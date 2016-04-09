@@ -2,9 +2,11 @@
 
 let cheerio = require('cheerio');
 
-module.exports = class HtmlParse {
+class HtmlParse {
   getElements(data){
     var $ = cheerio.load(data);
       console.log("Título:  " + $('title').text());
   }
 }
+
+module.exports = new HtmlParse();
