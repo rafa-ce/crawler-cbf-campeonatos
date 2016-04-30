@@ -4,6 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
+    "start": "node ./lib/index.js",
     "test": "./node_modules/.bin/mocha --reporter spec"
   },
   "repository": {
