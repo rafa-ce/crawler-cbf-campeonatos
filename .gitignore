@@ -31,3 +31,6 @@ node_modules
 
 # Optional REPL history
 .node_repl_history
+
+# Pasta data que contém o(s) json(s) criados após a execução do crawler
+data
