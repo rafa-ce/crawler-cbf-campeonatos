@@ -2,9 +2,9 @@
   "name": "crawler-cbf-campeonatos",
   "version": "0.0.1",
   "description": "",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node ./lib/index.js",
+    "start": "node index.js",
     "test": "./node_modules/.bin/mocha --reporter spec"
   },
   "repository": {
