@@ -9,6 +9,10 @@ let anos = [ 2012, 2013, 2014, 2015, 2016];
 if (process.argv.length > 2)
   anos = process.argv.slice(2);
 
+fs.mkdir('data', { recursive: true }, (err) => {
+  if (err) throw err;
+});
+
 Promise.all(anos.map(ano => { return crawler.get(ano)} ))
   .then(function (data) {
     data.forEach(function (elem) {
