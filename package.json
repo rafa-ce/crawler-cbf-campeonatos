@@ -14,7 +14,7 @@
   "author": "Rafa C.",
   "license": "MIT",
   "dependencies": {
-    "cheerio": "1.0.0-rc.3",
+    "cheerio": "^1.0.0-rc.3",
     "promise": "^8.0.3"
   },
   "devDependencies": {
