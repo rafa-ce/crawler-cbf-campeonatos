@@ -1,7 +1,7 @@
 {
   "name": "crawler-cbf-campeonatos",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.0.2",
+  "description": "Crawler para extrair informações de jogos no site da CBF",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",

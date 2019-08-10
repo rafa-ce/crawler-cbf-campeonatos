@@ -1,6 +1,5 @@
 'use strict';
 
-
 const crawler    = require('./lib/crawler');
 let Parse = require('./lib/parse'), parse = new Parse();
 const fs         = require('fs');
