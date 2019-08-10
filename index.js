@@ -25,7 +25,7 @@ Promise.all(anos.map(ano => { return crawler.get(ano)} ))
         let jogos = parse.todosOsJogos(elem.data(this));
         
         jogos.each(function (i) {
-          var detalhes = parse.detalhesJogo(elem.data(this), rodada);
+          var detalhes = parse.detalhesJogo(elem.data(this), rodada, elem.ano);
           arquivo.write(JSON.stringify(detalhes) +'\n');
         })
       })
